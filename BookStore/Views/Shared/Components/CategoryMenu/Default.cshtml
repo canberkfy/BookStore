@@ -1,0 +1,15 @@
+﻿@model IEnumerable<BookStore.Models.Category>
+
+<ul class="navbar-nav">
+    @foreach (var cat in Model)
+    {
+        <li class="nav-item">
+            <a class="nav-link"
+               asp-controller="Books"
+               asp-action="Index"
+               asp-route-categoryId="@cat.Id">
+                @cat.Name
+            </a>
+        </li>
+    }
+</ul>
